@@ -116,6 +116,8 @@ Inventory data: records of the current inventory levels for each grape variety, 
 
 Traceability data: records of the origin and history of each grape variety used in production, as well as the tanks and other equipment used.
 
+All of this data will need to be stored in a central database that can be accessed by the blending software to ensure accurate and efficient production.
+
 # System architecture
 
 User Interface: The user interface (UI) is responsible for allowing the user to input the desired formula for the blend, as well as displaying the output results. This could be a web-based application or a desktop application.
