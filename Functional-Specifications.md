@@ -94,7 +94,7 @@ N°1: ...
 ```
 
 (Here is the same example but visualized:)
-![MISSING IMAGE]() <!-- TODO -->
+![Example](documents/example.png)
 
 The software should have a user-friendly interface that allows the Cellar Master and her team to input the formula and specify the quantities of wine to be blended.
 
