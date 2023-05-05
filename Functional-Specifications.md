@@ -16,13 +16,13 @@
 - [Overview](#overview)
 - [Scope](#scope)
 - [Requirements](#requirements)
-  - [Functional Requirements](#functional-requirements)
-  - [Non-Functional Requirements](#non-functional-requirements)
-- [Use Cases](#use-cases)
-- [Data Requirements](#data-requirements)
-- [System Architecture](#system-architecture)
-- [Assumptions And Dependencies](#assumptions-and-dependencies)
-- [Acceptance Criteria](#acceptance-criteria)
+  - [Functional requirements](#functional-requirements)
+  - [Non-functional requirements](#non-functional-requirements)
+- [Use cases](#use-cases)
+- [Data requirements](#data-requirements)
+- [System architecture](#system-architecture)
+- [Assumptions and dependencies](#assumptions-and-dependencies)
+- [Acceptance criteria](#acceptance-criteria)
 - [Glossary](#glossary)
 
 </details>
@@ -54,7 +54,47 @@ The software should be able to produce the final product in the minimum number o
 
 The software should be able to produce the closest result to the input formula.
 
-## Functional requirements:
+## Functional requirements
+
+The software should take as input a text or read from a text file with the following format:
+```
+20   40 40
+12.5 25 37.5
+18.75 18.75 43.75
+```
+Here is are more details:
+- The first line contains the desired formula with the percentages for each wine
+- The second line has the volume of the tanks containing the wines
+- The third line has the volume of the additional tanks for blending
+- The spacing to align the first and second lines is pure syntactic sugar, thus long number may ne be broken down
+- To accomodate all kinds of representations, decimal separators may be either a dot `.` or a comma `,`
+- The program should give the user an error message if the formula does not add up to 100% or if the number of wines in first two lines does not match
+- *If time allows it, the optional usage of volume units may be added*
+
+The software should return a block of text containing the following informations:
+- The closest resulting formula from the required one and the steps to achieve it
+- *If time allows it, the formula generating the less waste and the steps to achieve it*
+- *If time allows it, a formula that consiliates conformity of the desired formula and steps to achieve it*
+- The values should be given with up to 3 decimals
+- The number in parenthesis is the volume of that wine *with the provided unit if any*
+```
+Closest match:
+N°1: 19.048% (8.333)
+N°2: 38.095% (16.667)
+N°3: 42.857% (18.75)
+Step 1: 3 -> 4 & 5 (N°3)
+Step 2: 1 & 2 -> 3 (N°1 & N°2)
+Step 3: 3 -> 1 (N°1 & N°2), 3 & 5 -> 6 (N°1-3)
+Result in tank(s): 6
+Remain in 1: N°1 & N°2
+Remain in 4: N°3
+
+Fewer waste:
+N°1: ...
+```
+
+(Here is the same example but visualized:)
+![MISSING IMAGE]() <!-- TODO -->
 
 The software should have a user-friendly interface that allows the Cellar Master and her team to input the formula and specify the quantities of wine to be blended.
 
@@ -68,7 +108,7 @@ The software should be able to adjust the blending process in real-time if any t
 
 The software should be able to generate a report on the blending process, including the number of steps taken, the quantity of wine used from each tank, and the final product's characteristics.
 
-## Non-functional requirements:
+## Non-functional requirements
 
 The software should be highly secure to prevent unauthorized access to the system.
 
