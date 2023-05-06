@@ -96,15 +96,13 @@ N°1: ...
 (Here is the same example but visualized:)
 ![Example](documents/example.png)
 
-The software should have a user-friendly interface that allows the Cellar Master and her team to input the formula and specify the quantities of wine to be blended.
+The software should be a console application working only with text. *If time allows it, an API and even a GUI might be implemented.*
 
 The software should be able to access data on the tanks, their sizes, and their current contents.
 
 The software should be able to calculate the best combination of tanks to use based on the input formula and the available wine in the tanks.
 
 The software should be able to track the quantity of wine being pumped from each tank and ensure that no tank is left partially full or partially empty.
-
-The software should be able to adjust the blending process in real-time if any tanks become unavailable or if the input formula changes.
 
 The software should be able to generate a report on the blending process, including the number of steps taken, the quantity of wine used from each tank, and the final product's characteristics.
 
@@ -139,8 +137,6 @@ Monitor wine quality: The software can monitor the quality of the wine in the ta
 Manage tanks and pipes: The authorized users can manage the tanks and pipes, including adding or removing tanks, connecting or disconnecting pipes, and cleaning or sterilizing the equipment.
 
 # Data requirements
-
-Grape data: information about the different grape varieties used in making the champagne, including their characteristics and harvest dates.
 
 Tank data: information about the various tanks available for blending, including their sizes, contents, and previous use history.
 
@@ -184,10 +180,6 @@ The system of pumps and pipes can connect any tank with any other tank.
 
 The input formula will not change during the blending process.
 
-The software will not be used to blend wine from different years.
-
-The software will only be used to blend wine during the second fermentation stage.
-
 The software will not be used to age or store the wine.
 
 The software will only be used by the Cellar Master and her team.
@@ -204,9 +196,7 @@ The software should be able to output a detailed plan for blending the wines in 
 
 The software should ensure that no tank is left partially full or empty at any point in the blending process to prevent oxidation of the wine.
 
-The software should ensure that no step in the blending process causes any loss of wine.
-
-The software should be able to track the progress of the blending process and provide real-time feedback to the user.
+*The software should be able to track the progress of the blending process and provide real-time feedback to the user.*
 
 The software should ensure that the final product meets the input formula as closely as possible.
 
