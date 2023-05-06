@@ -2,11 +2,8 @@
 
 <p align="center" style="font-weight: bold; font-size: 21px"> Krug Champagne Blending Software</p>
 <p align="center" style="font-weight: bold; font-size: 18px"> Functional Specifications</p>
-<br>
-<p align="center"> Karine VINETTE</p>
-<br>
 
-<p align="center"> ALGOSUP, Group 7. All Rights Reserved. </p>
+
 
 <hr>
 
@@ -122,8 +119,6 @@ The software should be highly performant to ensure that the blending process is 
 
 Create a new blend: The Cellar Master or another authorized user can create a new blend by selecting the desired wines from the available inventory and specifying their proportions. The software should ensure that the selected tanks are completely full and not in contact with oxygen.
 
-Modify an existing blend: The Cellar Master can modify an existing blend by adjusting the proportions of the wines used. The software should ensure that the modified tanks are completely full and not in contact with oxygen.
-
 View inventory: The authorized users can view the current inventory of available wines in the tanks, including their quantities and properties such as grape variety, age, and origin.
 
 View blend history: The authorized users can view the history of the blends created, including their formulas, proportions, and dates.
@@ -132,9 +127,6 @@ Export blend recipe: The authorized users can export the formula and proportions
 
 Import blend recipe: The authorized users can import a blend formula and proportions from a file or external source, and the software should validate the input and ensure that the required wines are available in the inventory.
 
-Monitor wine quality: The software can monitor the quality of the wine in the tanks, such as temperature, acidity, and pH, and alert the users if any parameter is outside the desired range.
-
-Manage tanks and pipes: The authorized users can manage the tanks and pipes, including adding or removing tanks, connecting or disconnecting pipes, and cleaning or sterilizing the equipment.
 
 # Data requirements
 
@@ -156,17 +148,9 @@ All of this data will need to be stored in a central database that can be access
 
 # System architecture
 
-User Interface: The user interface (UI) is responsible for allowing the user to input the desired formula for the blend, as well as displaying the output results. This could be a web-based application or a desktop application.
-
-Formula Database: The formula database stores the different combinations of wines that have been tested and approved by the Cellar Master and her team.
-
-Tank Management System: The tank management system is responsible for keeping track of the wine stored in each tank, ensuring that tanks are never left partially full or empty, and that wine is not exposed to oxygen. This system should also be capable of connecting any tank with any other tank using a system of pumps and pipes.
+User Interface: The user interface (UI) is responsible for allowing the user to input the desired formula for the blend, as well as displaying the output results. This could be a desktop application.
 
 Blending Engine: The blending engine is the core component of the system, responsible for calculating the optimal blend based on the input formula and the available wine stored in the tanks. It uses algorithms and data structures to find the minimum number of steps to produce the closest result to the input formula.
-
-Data Analytics and Reporting: This component is responsible for analyzing data collected by the system and generating reports for the Cellar Master and her team. The reports could include information such as the number of times each tank has been used, the amount of wine remaining in each tank, and the optimal blend that was produced.
-
-Security and Authorization: This component is responsible for ensuring that only authorized users can access the system and its data. It should include features such as authentication, authorization, and encryption to protect sensitive data.
 
 Infrastructure: This component includes the hardware and software required to host the system. It could be hosted on-premises or in the cloud, depending on the requirements of the organization.
 
@@ -212,12 +196,6 @@ Winery: a facility where wine is made.
 
 Méthode champenoise: a traditional method of making champagne that involves a complex process of fermentation and aging.
 
-Pinot Noir: a black grape variety commonly used in champagne production.
-
-Pinot Meunier: a black grape variety commonly used in champagne production.
-
-Chardonnay: a white grape variety commonly used in champagne production.
-
 Harvesting: the process of picking grapes from the vine.
 
 Pressing: the process of extracting juice from the grapes.
@@ -248,4 +226,3 @@ Oxidation: the process by which wine is exposed to oxygen, which can change its 
 
 Formula: the specific combination of wines and proportions used to create a desired flavor profile.
 
-Idiomatic style: a programming style that is consistent with the conventions of the language being used.
