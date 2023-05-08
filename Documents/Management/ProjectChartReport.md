@@ -60,11 +60,11 @@ This team is organized as follows.
 
 |           Roles             |  Content |
 | ---------------------- |---------|
-| Project Manager  | Repo, Project charter, budget, schedule, risk, coordination, management   |
-|  QA | Test Case, Test Plan, Test report |
-|    Software Engineer |  Build the algorithm, program the API  |
-| Technical Leader |  Technical Specification , technicals decision, README, Architecture Diagram   |
-| Program Manager  | Functional Specification , communication with client, design choices|
+| Project Manager (Thomas Planchard) | Repo, Project charter, budget, schedule, risk, coordination, management   |
+|  QA (Léo Chartier, Quentin Clément)| Test Case, Test Plan, Test report |
+|    Software Engineer (Christopher Diggins) |  Build the algorithm, program the API  |
+| Technical Leader (Christopher Diggins) |  Technical Specification , technicals decision, README, Architecture Diagram   |
+| Program Manager (Karine Vinette)  | Functional Specification , communication with client, design choices|
 
 ## Scope
 
