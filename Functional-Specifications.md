@@ -95,11 +95,7 @@ N°1: ...
 
 The software should be a console application working only with text. *If time allows it, an API and even a GUI might be implemented.*
 
-The software should be able to access data on the tanks, their sizes, and their current contents.
-
 The software should be able to calculate the best combination of tanks to use based on the input formula and the available wine in the tanks.
-
-The software should be able to track the quantity of wine being pumped from each tank and ensure that no tank is left partially full or partially empty.
 
 The software should be able to generate a report on the blending process, including the number of steps taken, the quantity of wine used from each tank, and the final product's characteristics.
 
@@ -119,14 +115,7 @@ The software should be highly performant to ensure that the blending process is 
 
 Create a new blend: The Cellar Master or another authorized user can create a new blend by selecting the desired wines from the available inventory and specifying their proportions. The software should ensure that the selected tanks are completely full and not in contact with oxygen.
 
-View inventory: The authorized users can view the current inventory of available wines in the tanks, including their quantities and properties such as grape variety, age, and origin.
-
-View blend history: The authorized users can view the history of the blends created, including their formulas, proportions, and dates.
-
 Export blend recipe: The authorized users can export the formula and proportions of a blend to a file or print it for record keeping or sharing with other parties.
-
-Import blend recipe: The authorized users can import a blend formula and proportions from a file or external source, and the software should validate the input and ensure that the required wines are available in the inventory.
-
 
 # Data requirements
 
@@ -138,17 +127,9 @@ Formula data: the final formula for the Krug Grande cuvée, including the ingred
 
 Production data: records of each batch produced, including the tanks used, their contents, and the blending process.
 
-Quality control data: records of quality control tests performed on each batch, including measurements of alcohol content, pH levels, and other relevant parameters.
-
-Inventory data: records of the current inventory levels for each grape variety, tank, and finished product.
-
-Traceability data: records of the origin and history of each grape variety used in production, as well as the tanks and other equipment used.
-
 All of this data will need to be stored in a central database that can be accessed by the blending software to ensure accurate and efficient production.
 
 # System architecture
-
-User Interface: The user interface (UI) is responsible for allowing the user to input the desired formula for the blend, as well as displaying the output results. This could be a desktop application.
 
 Blending Engine: The blending engine is the core component of the system, responsible for calculating the optimal blend based on the input formula and the available wine stored in the tanks. It uses algorithms and data structures to find the minimum number of steps to produce the closest result to the input formula.
 
@@ -164,15 +145,11 @@ The system of pumps and pipes can connect any tank with any other tank.
 
 The input formula will not change during the blending process.
 
-The software will not be used to age or store the wine.
-
 The software will only be used by the Cellar Master and her team.
 
 # Acceptance criteria
 
 The software should be able to receive the wine blending formula from the Cellar Master, Julie CAVIL, as input.
-
-The software should be able to access and manipulate data on the various tanks and their current contents.
 
 The software should be able to calculate the optimal blending ratio of wines in the different tanks to achieve the closest possible result to the input formula.
 
