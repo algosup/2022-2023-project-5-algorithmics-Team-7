@@ -1,3 +1,15 @@
+## The Tuesday 02 May 2023
+Hello Franck, our team and I have a few questions regarding the start of this project.
+Regarding client contact, could you please clarify who will be our main point of contact with Krug Champagne during this project? And what is the best way to reach out to them if we have any questions or need additional information?
+For the formula of the champagne what is the percentage breakdown of each wine in the final blend? And what is the specific formula ?
+I would also like to know more about the various tank sizes that we have at our disposal. Can you please provide a list of the different tank sizes we have and the capacity of each tank?
+Thank you.
+
+Hello Thomas, I'm going to be the customer contact for the time being. The formula varies from year to year and is an input of your software. You have to design and provide a solution for the customer to be able to input the values. It will be something like 1.2%wine1+2.7%wine2+etc.
+Tanks come in all shapes and sizes. Again, nothing should be hard-coded in your software. You could have a configuration file, an API etc. you have to make proposals at the design stage and have them agreed upon by the customer.
+
+
+
 ## The Wednesday 03 May 2023
 Karine Vinette <br>
   14 h 32 <br>
