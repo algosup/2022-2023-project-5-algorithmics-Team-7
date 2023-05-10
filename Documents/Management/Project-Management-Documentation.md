@@ -21,7 +21,7 @@ Welcome to the Krug Champagne Project. This project is aimed at building an algo
 
 1. **KPIs**: The project's key performance indicators will be measured at specific intervals. All team members are expected to fill their KPIs promptly and accurately. Team members are expected to fill their KPIs at the end of each week. <br>Here is the link to [KPIs](https://docs.google.com/spreadsheets/d/1rdj3Sp6lbA9zX_4oCAbLPIQLKgYrU9wKa_OI0TgnUcU/edit?usp=sharing).
 
-2. **Task Management**: All team members will have access to the project management tool ([Trello]()) to manage their tasks and track their progress.
+2. **Task Management**: All team members will have access to the project management tool ([Trello]()) to manage their tasks and track their progress. Every Sunday, an email will be sent to every team member with a recap of all the tasks to do, pending, and completed. This email will serve as a reminder of the project's progress and will allow team members to plan their upcoming week. 
 
 3. **RACI Matrix**: The [RACI matrix](Documents/Management/RACI.pdf) will be used to define team roles and responsibilities. All team members are expected to familiarize themselves with the matrix and adhere to their assigned roles.
 
