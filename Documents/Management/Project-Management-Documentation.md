@@ -35,7 +35,7 @@ To update the critical path, we will hold a meeting at the start of each week to
  
 It is important to note that any delays or issues with critical path tasks must be communicated to the project manager immediately so that appropriate action can be taken to minimize the impact on the project's timeline.
 
-The critical path is available in the Management folder in the DocumentS folder, which also includes other important documents related to the project, such as the risk management plan, RACI matrix, weekly reports... It is essential that all team members are familiar with the critical path and refer to it regularly to ensure that the project stays on track.
+The critical path is available in the Management folder in the Documents folder, which also includes other important documents related to the project, such as the risk management plan, RACI matrix, weekly reports... It is essential that all team members are familiar with the critical path and refer to it regularly to ensure that the project stays on track.
 
 
 ## Conclusion:
