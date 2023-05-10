@@ -1,5 +1,5 @@
 
-| NAME | LINK | SOURCES | VALIDATION | SUBJECT | REASON |
+| NAME | LINK | SOURCE | VALIDATION | SUBJECT | REASON |
 |------|------|---------|------------|---------|--------|
 | Mail App | https://developers.google.com/apps-script/reference/mail/mail-app?hl=fr | https://developers.google.com/ | Validated | Send email | Communication Team, to send an email with total control on the content |
 | Sending email from Google Sheets | https://spreadsheet.dev/send-email-from-google-sheets | https://spreadsheet.dev/ | Validated | Send email | QA Communication, to send a mail when there is a failure on the test case |
