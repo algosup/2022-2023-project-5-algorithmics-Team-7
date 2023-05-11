@@ -8,7 +8,6 @@
 - [Purpose](#purpose)
 - [Objectives](#objectives)
 - [Risk Assessment](#risk-assessment)
-- [Risk Mitigation Strategies](#risk-mitigation-strategies)
 - [Risk Identification](#risk-identification)
 - [Risk Monitoring and Control](#risk-monitoring-and-control)
 - [Communication Plan](#communication-plan)
@@ -38,16 +37,6 @@ Each identified risk will be assessed based on its likelihood of occurring and i
 - Impact: High, Medium, or Low
 
 The risk matrix will be used to determine the level of risk associated with each identified risk.
-
-## Risk Mitigation Strategies
-
-The project team will develop strategies to mitigate each identified risk. The following strategies will be used:
-
-- Avoid: Strategies to avoid the risk altogether
-- Transfer: Strategies to transfer the risk to a third party
-- Mitigate: Strategies to reduce the likelihood and/or impact of the risk
-- Accept: Strategies to accept the risk and develop a plan to address the risk if it occurs
-
 
 
 ## Risk Identification
