@@ -1,6 +1,16 @@
 
 <h1>Project Management Documentation</h1>
 
+<details>
+<summary>Table of contents</summary>
+
+- [Introduction:](#introduction)
+- [Project Rules:](#project-rules)
+- [Project Protocols:](#project-protocols)
+- [Critical Path:](#critical-path)
+- [Conclusion:](#conclusion)
+
+</details>
 
 ## Introduction:
 
@@ -23,9 +33,11 @@ Welcome to the Krug Champagne Project. This project is aimed at building an algo
 
 2. **Task Management**: All team members will have access to the project management tool ([Trello]()) to manage their tasks and track their progress. Every Sunday, an email will be sent to every team member with a recap of all the tasks to do, pending, and completed. This email will serve as a reminder of the project's progress and will allow team members to plan their upcoming week. 
 
-3. **RACI Matrix**: The [RACI matrix](Documents/Management/RACI.pdf) will be used to define team roles and responsibilities. All team members are expected to familiarize themselves with the matrix and adhere to their assigned roles.
+3. **RACI Matrix**: The [RACI matrix](RACI.pdf) will be used to define team roles and responsibilities. All team members are expected to familiarize themselves with the matrix and adhere to their assigned roles.
 
 4. **Project Schedule**: The project schedule will be updated regularly to reflect the current status of the project. All team members are expected to check the schedule regularly and ensure that they meet their deadlines. Here is the link to the [project schedule](https://trello.com/b/QVQdK1at/finalproject/calendar/2023/05).
+
+5. **Risk management**: [The Risk Management Plan](Risk-Management-Plan.md) is a critical component of the project management plan. By identifying potential risks and developing strategies to mitigate these risks, the project team can increase the likelihood of project success. The risk management plan will be reviewed each week and updated throughout the project lifecycle to ensure that risks are effectively managed.
    
 
 ## Critical Path: 

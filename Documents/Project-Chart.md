@@ -1,10 +1,36 @@
-# Project Charter: Krug Champagne Project
+<h1> Project Charter: Krug Champagne Project</h1>
+
+<details>
+<summary>Table of contents</summary>
+
+- [Client](#client)
+- [Mentor](#mentor)
+- [Project Purpose](#project-purpose)
+- [Benefits](#benefits)
+- [User Roles](#user-roles)
+- [Stories by Role](#stories-by-role)
+- [Team Organization](#team-organization)
+- [Scope](#scope)
+  - [Phase 1 - Planning and Research (Week 1-2)](#phase-1---planning-and-research-week-1-2)
+  - [Phase 2 - Algorithm Development and Testing (Week 3-5)](#phase-2---algorithm-development-and-testing-week-3-5)
+  - [Phase 3 - Testing and Refinement (Week 5-6)](#phase-3---testing-and-refinement-week-5-6)
+  - [Phase 4 - Testing and Deployment (Week 7-8)](#phase-4---testing-and-deployment-week-7-8)
+- [Out of scope](#out-of-scope)
+- [Schedule](#schedule)
+- [Budget](#budget)
+- [Risk](#risk)
+- [Acceptance criteria](#acceptance-criteria)
+
+</details>
+<hr>
 
 This is the project charter for the Krug Champagne Project.
 This software will be delivered as an API
 
 - [View Published Version]()
 - [Source Code](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7)
+
+
 
 
 ## Client
