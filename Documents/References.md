@@ -1,9 +1,8 @@
 <hr>
 
-<p align="center" style="font-weight: bold; font-size: 21px"> Krug Champagne Blending Software</p>
 <p align="center" style="font-weight: bold; font-size: 18px"> References </p>
 
-
+The reference directory file serves as a comprehensive collection of all the resources and sources used throughout the project.
 
 <hr>
 
