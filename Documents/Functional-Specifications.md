@@ -65,13 +65,14 @@ The software should take as input two text files with the following format:
 ```
 `volumes.txt` (quantity that each tank hold in the same unit):
 ```
-12.5
-25
-37.5
-18.75
-18.75
-43.75
+1250
+2500
+3750
+1875
+1875
+4375
 ```
+- it is requested that the amounts be integers or have a fixed number of decimal points (two), which will allow for precise equivalence computation and quicker checks when determining if tanks can be combined.
 - We assume that the wines are present in the first tanks in the same order of the formula. (Here, wine N°3 starts at 37.5 volume units and must be present at 40%)
 - The decimal separators must be a dot `.` and not a comma `,`.
 - The program should give the user an error message if the formula percentages do not add up to 100% or if there are more wines than tanks.
