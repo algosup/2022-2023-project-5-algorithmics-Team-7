@@ -27,17 +27,17 @@
 
 # Overview
 
-The goal of this project is to build software that can blend large quantities of wine in the right proportions to produce the closest result to the formula with the minimum number of steps. The software will focus on stage 4: Blending, and it will be used by the Cellar Master, Julie CAVIL, and her team.
+The goal of this project is to build a software that can blend large quantities of wine in the right proportions to produce the closest result to the formula with the minimum number of steps. The software will focus on stage 4: Blending, and it will be used by the Cellar Master, Julie CAVIL, and her team.
 
 # Scope
 
 The scope of the project would be to create a software system that can assist in the blending process of Krug Champagne's new winery. The system should allow the Cellar Master and her team to input the desired formula for the champagne blend and then automatically calculate the optimal combinations of the wines in the various tanks to achieve the desired result. The system should also ensure that the tanks are never left partially full to avoid oxidation and contamination of the wine.
 
-The system should be able to handle a large number of tanks and blends, and it should be designed to scale up or down as needed. The system should also be able to track the history of each tank, including the wine that has been stored in it, the dates it was filled and emptied, and any other relevant information.
+The system should be able to handle a large number of tanks and blends, and it should be designed to scale up or down as needed.
 
 In addition, the system should provide real-time feedback to the Cellar Master and her team as they adjust the blend, allowing them to see how changes in the proportions of different wines will affect the final result. The system should be user-friendly and intuitive, allowing the Cellar Master and her team to easily navigate and use its features.
 
-Overall, the scope of the project is to create a comprehensive software system that streamlines the blending process, reduces errors, and ensures consistency in the final product.
+Overall, the scope of the project is to create a comprehensive software system that helps the cellar master during the blending process.
 
 # Requirements
 
@@ -138,17 +138,13 @@ Export blend recipe: The authorized users can export the formula and proportions
 
 Tank data: information about the various tanks available for blending, including their sizes, contents, and previous use history.
 
-Blending data: data on the different blends created during the testing phase, including their ingredients and proportions, as well as notes from the tasting team.
+Blending data: data on the different blends created during the testing phase, including their ingredients.
 
 Formula data: the final formula for the Krug Grande cuvée, including the ingredients and proportions.
 
-Production data: records of each batch produced, including the tanks used, their contents, and the blending process.
-
-All of this data will need to be stored in a central database that can be accessed by the blending software to ensure accurate and efficient production.
-
 # System architecture
 
-Blending Engine: The blending engine is the core component of the system, responsible for calculating the optimal blend based on the input formula and the available wine stored in the tanks. It uses algorithms and data structures to find the minimum number of steps to produce the closest result to the input formula.
+Blending Software: It is the core component of the system, responsible for calculating the optimal blend based on the input formula and the available wine stored in the tanks. It uses algorithms and data structures to find the minimum number of steps to produce the closest result to the input formula.
 
 Infrastructure: This component includes the hardware and software required to host the system. It could be hosted on-premises or in the cloud, depending on the requirements of the organization.
 
