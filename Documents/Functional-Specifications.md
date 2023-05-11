@@ -72,10 +72,9 @@ The software should take as input two text files with the following format:
 1875
 4375
 ```
-- it is requested that the amounts be integers or have a fixed number of decimal points (two), which will allow for precise equivalence computation and quicker checks when determining if tanks can be combined.
+- It is requested that the amounts be integers or have a fixed number of decimal points (two), which will allow for precise equivalence computation and quicker checks when determining if tanks can be combined.
 - We assume that the wines are present in the first tanks in the same order of the formula. (Here, wine N°3 starts at 37.5 volume units and must be present at 40%)
 - The decimal separators must be a dot `.` and not a comma `,`.
-- The program should give the user an error message if the formula percentages do not add up to 100% or if there are more wines than tanks.
 - *If time allows it, the optional usage of volume units may be added.*
 
 The software should return two text files containing the following informations:
