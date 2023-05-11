@@ -31,25 +31,21 @@ The goal of this project is to build a software that can blend large quantities 
 
 # Scope
 
-The scope of the project would be to create a software system that can assist in the blending process of Krug Champagne's new winery. The system should allow the Cellar Master and her team to input the desired formula for the champagne blend and then automatically calculate the optimal combinations of the wines in the various tanks to achieve the desired result. The system should also ensure that the tanks are never left partially full to avoid oxidation and contamination of the wine.
+The scope of the project would be to create a software system that can assist in the blending process of Krug Champagne's new winery. The system should allow the Cellar Master and her team to input the desired formula (they will input the quantity of wine, the number of tanks and their size) for the champagne blend and then automatically calculate the optimal combinations of the wines in the various tanks to achieve the desired result. The system should also ensure that the tanks are never left partially full to avoid oxidation and contamination of the wine.
 
 The system should be able to handle a large number of tanks and blends, and it should be designed to scale up or down as needed.
-
-In addition, the system should provide real-time feedback to the Cellar Master and her team as they adjust the blend, allowing them to see how changes in the proportions of different wines will affect the final result. The system should be user-friendly and intuitive, allowing the Cellar Master and her team to easily navigate and use its features.
 
 Overall, the scope of the project is to create a comprehensive software system that helps the cellar master during the blending process.
 
 # Requirements
 
-The software should be able to blend wine from 330 tanks of various sizes in the right proportions to produce the closest result to the input formula.
+The software should be able to blend wine in a defined number of tanks of various sizes in the right proportions to produce the closest result to the input formula.
+
+The software should be able to produce the final product in the minimum number of steps possible.
 
 The software should ensure that no tank is left partially full or partially empty due to the risk of oxidation.
 
 The software should be written in a language that is fast and efficient.
-
-The software should be able to produce the final product in the minimum number of steps possible.
-
-The software should be able to produce the closest result to the input formula.
 
 ## Functional requirements
 
@@ -63,7 +59,7 @@ The software should take as input two text files with the following format:
 40
 40
 ```
-`volumes.txt` (quantity that each tank hold in the same unit):
+`volumes.txt` (quantity that each tank can hold in the same unit):
 ```
 1250
 2500
@@ -72,16 +68,16 @@ The software should take as input two text files with the following format:
 1875
 4375
 ```
-- It is requested that the amounts be integers or have a fixed number of decimal points (two), which will allow for precise equivalence computation and quicker checks when determining if tanks can be combined.
+- It is requested that the amounts be integers or have a fixed number of decimals (two), which will allow for precise equivalence computation and quicker checks when determining if tanks can be combined. They will have the same unit.
 - We assume that the wines are present in the first tanks in the same order of the formula. (Here, wine N°3 starts at 37.5 volume units and must be present at 40%)
 - The decimal separators must be a dot `.` and not a comma `,`.
 - *If time allows it, the optional usage of volume units may be added.*
 
 The software should return two text files containing the following informations:
-- The closest resulting formula from the required one and the steps to achieve it
-- *If time allows it, the formula generating the less waste and the steps to achieve it*
-- *If time allows it, a formula that consiliates conformity of the desired formula and steps to achieve it*
-- The values should be given with up to 3 decimals
+- The closest resulting formula from the required one and the steps to achieve it.
+- *If time allows it, the formula generating the less waste and the steps to achieve it*.
+- *If time allows it, a formula that consiliates conformity of the desired formula and steps to achieve it*.
+- The values should be given with up to 3 decimals.
 
 `result.txt` (percentage of each wine in the resulting formula):
 ```
@@ -114,7 +110,7 @@ The software should be a console application working only with text. *If time al
 
 The software should be able to calculate the best combination of tanks to use based on the input formula and the available wine in the tanks.
 
-The software should be able to generate a report on the blending process, including the number of steps taken, the quantity of wine used from each tank, and the final product's characteristics.
+The software should be able to generate a report on the blending process, including the number of steps taken, the quantity of wine remaining in each tank, and the final product's characteristics.
 
 ## Non-functional requirements
 
@@ -134,9 +130,17 @@ Create a new blend: The Cellar Master or another authorized user can create a ne
 
 Export blend recipe: The authorized users can export the formula and proportions of a blend to a file or print it for record keeping or sharing with other parties.
 
+Sommeliers and other wine experts can use the Krug Champagne algorithm to ensure that the champagne blends they purchase from the producer meet their desired taste and quality profiles. This can help them provide the best quality of Champagne to their customers.
+
+Industrial users, such as those responsible for the production of Krug Champagne, can use the algorithm to optimize the blending process and minimize wine waste. This can increase production efficiency and maximize profits.
+
+The Krug Champagne company itself can benefit from the project by increasing revenue and gaining a competitive advantage in the market. The algorithm can help improve efficiency, consistency in quality, and reduce production costs.
+
+The project team can also benefit from the Krug Champagne project by gaining experience in algorithm development and testing, project management, and collaboration with clients.
+
 # Data requirements
 
-Tank data: information about the various tanks available for blending, including their sizes, contents, and previous use history.
+Tank data: information about the various tanks available for blending, including their sizes, contents.
 
 Blending data: data on the different blends created during the testing phase, including their ingredients.
 
@@ -215,4 +219,6 @@ Pumps and pipes: equipment used for transferring wine between tanks.
 Oxidation: the process by which wine is exposed to oxygen, which can change its flavor and aroma.
 
 Formula: the specific combination of wines and proportions used to create a desired flavor profile.
+
+GUI: stands for Graphical User Interface. It refers to the visual interface elements used to interact with a software program or computer system. GUIs typically include windows, icons, menus, buttons, and other visual elements that allow users to perform tasks by clicking, dragging, and dropping objects on the screen, rather than typing text commands. GUIs are designed to be intuitive and user-friendly, making it easier for non-technical users to interact with complex software and systems.
 
