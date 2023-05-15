@@ -6,7 +6,7 @@ This software has been designed for Krug Champagne, which is a part of LVMH. The
 - **[KPI Dashboard](https://docs.google.com/spreadsheets/d/1rdj3Sp6lbA9zX_4oCAbLPIQLKgYrU9wKa_OI0TgnUcU/edit?usp=sharing)**
 - **[Functional Requirements](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Functional-Specifications.md)**
 - **[Techniqual Requirements](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Techniqual-Specifications.md)**
-- **[Project Charter](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Management/ProjectChartReport.md)**
+- **[Project Charter](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Project-Chart.md)**
 - **[RACI](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Management/RACI.pdf)**
 - **[Project Management Documentation](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Management/Project-Management-Documentation.md)**
 - **[Critical Path](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Management/Critical-Path.pdf)**
