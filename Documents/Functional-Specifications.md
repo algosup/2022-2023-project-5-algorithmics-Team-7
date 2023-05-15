@@ -27,15 +27,13 @@
 
 # Overview
 
-The goal of this project is to build a software that can blend large quantities of wine in the right proportions to produce the closest result to the formula with the minimum number of steps. The software will focus on stage 4: Blending, and it will be used by the Cellar Master, Julie CAVIL, and her team.
-
-# Scope
+The goal of this project is to build a software that can blend large quantities of wine in the right proportions to produce the closest result to the formula with the minimum number of steps. The software will focus on stage 4: Blending.
 
 The scope of the project would be to create a software system that can assist in the blending process of Krug Champagne's new winery. The system should allow the Cellar Master and her team to input the desired formula (they will input the quantity of wine, the number of tanks and their size) for the champagne blend and then automatically calculate the optimal combinations of the wines in the various tanks to achieve the desired result. The system should also ensure that the tanks are never left partially full to avoid oxidation and contamination of the wine.
 
 The system should be able to handle a large number of tanks and blends, and it should be designed to scale up or down as needed.
 
-Overall, the scope of the project is to create a comprehensive software system that helps the cellar master during the blending process.
+Overall, the scope of the project is to create a specialized software system that helps the cellar master during the blending process.
 
 # Requirements
 
@@ -45,7 +43,6 @@ The software should be able to produce the final product in the minimum number o
 
 The software should ensure that no tank is left partially full or partially empty due to the risk of oxidation.
 
-The software should be written in a language that is fast and efficient.
 
 ## Functional requirements
 
@@ -114,15 +111,7 @@ The software should be able to generate a report on the blending process, includ
 
 ## Non-functional requirements
 
-The software should be highly secure to prevent unauthorized access to the system.
-
-The software should be highly reliable to ensure that there are no crashes or errors during the blending process.
-
 The software should be scalable to handle a large number of tanks and blending combinations.
-
-The software should be written in a language that is easy to maintain and update.
-
-The software should be highly performant to ensure that the blending process is completed in a reasonable amount of time.
 
 # Use cases
 
@@ -150,8 +139,6 @@ Formula data: the final formula for the Krug Grande cuvée, including the ingred
 
 Blending Software: It is the core component of the system, responsible for calculating the optimal blend based on the input formula and the available wine stored in the tanks. It uses algorithms and data structures to find the minimum number of steps to produce the closest result to the input formula.
 
-Infrastructure: This component includes the hardware and software required to host the system. It could be hosted on-premises or in the cloud, depending on the requirements of the organization.
-
 Overall, the system architecture should be scalable, flexible, and modular to accommodate future changes and updates to the software. It should also be designed with performance and reliability in mind to ensure that it can handle the complex calculations and data management tasks required for the blending process.
 
 # Assumptions and dependencies
@@ -162,8 +149,6 @@ The system of pumps and pipes can connect any tank with any other tank.
 
 The input formula will not change during the blending process.
 
-The software will only be used by the Cellar Master and her team.
-
 # Acceptance criteria
 
 The software should be able to receive the wine blending formula from the Cellar Master, Julie CAVIL, as input.
@@ -173,8 +158,6 @@ The software should be able to calculate the optimal blending ratio of wines in 
 The software should be able to output a detailed plan for blending the wines in the tanks to achieve the optimal ratio, including which tanks to use and in what order, and how much wine to transfer between the tanks.
 
 The software should ensure that no tank is left partially full or empty at any point in the blending process to prevent oxidation of the wine.
-
-*The software should be able to track the progress of the blending process and provide real-time feedback to the user.*
 
 The software should ensure that the final product meets the input formula as closely as possible.
 
@@ -192,21 +175,9 @@ Méthode champenoise: a traditional method of making champagne that involves a c
 
 Harvesting: the process of picking grapes from the vine.
 
-Pressing: the process of extracting juice from the grapes.
-
 Fermentation: the process by which yeast converts sugar into alcohol.
 
-Still wine: wine that does not contain carbon dioxide bubbles.
-
 Blending: the process of mixing different wines together to create a consistent flavor profile.
-
-Second fermentation: the process by which carbon dioxide bubbles are created in champagne.
-
-Lees: dead yeast cells that settle at the bottom of the bottle during aging.
-
-Riddling: the process of gradually rotating and tilting champagne bottles to move the lees towards the neck of the bottle.
-
-Disgorgement: the process of removing the frozen plug of lees from the neck of the bottle.
 
 Dosage: the process of adding a mixture of wine and sugar to adjust the sweetness level of the champagne.
 
