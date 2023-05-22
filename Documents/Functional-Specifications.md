@@ -67,14 +67,13 @@ The software should take as input two text files with the following format:
 ```
 - It is requested that the amounts be integers or have a fixed number of decimals (two), which will allow for precise equivalence computation and quicker checks when determining if tanks can be combined. They will have the same unit.
 - We assume that the wines are present in the first tanks in the same order of the formula. (Here, wine N°3 starts at 37.5 volume units and must be present at 40%)
-- The decimal separators must be a dot `.` and not a comma `,`.
 - *If time allows it, the optional usage of volume units may be added.*
 
 The software should return two text files containing the following informations:
 - The closest resulting formula from the required one and the steps to achieve it.
 - *If time allows it, the formula generating the less waste and the steps to achieve it*.
-- *If time allows it, a formula that consiliates conformity of the desired formula and steps to achieve it*.
-- The values should be given with up to 3 decimals.
+- *If time allows it, a middle ground formula between conformity of the desired formula and steps to achieve it*.
+- The values should be given without decimals (42.69% -> 42%).
 
 `result.txt` (percentage of each wine in the resulting formula):
 ```
