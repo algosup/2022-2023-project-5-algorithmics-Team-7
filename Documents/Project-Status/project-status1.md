@@ -34,4 +34,4 @@ N/A
 - Budget: N/A
 
 ## Next Report
-The next report will be submitted on 2023-05-15, covering the progress made during Phase 2 of the project.
+The next report will be submitted on 2023-06-02, covering the progress made during Phase 2 of the project.
