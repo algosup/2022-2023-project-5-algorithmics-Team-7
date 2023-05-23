@@ -21,7 +21,7 @@ The reference directory file serves as a comprehensive collection of all the res
 |------|------|---------|------------|---------|--------|
 | Mail App | https://developers.google.com/apps-script/reference/mail/mail-app?hl=fr | https://developers.google.com/ | Validated | Send email | Communication Team, to send an email with total control on the content |
 | A PM is not an Admin | https://thedigitalpm.medium.com/a-pm-is-not-an-admin-why-you-shouldnt-always-be-the-one-taking-notes-d3f02600ddec | https://thedigitalpm.medium.com/ | Validated | Project Manager  | Team Organisation, to clarify the role of the project manager that is cleary not an assistant |
-
+| Project Management Tutorial | https://www.youtube.com/watch?v=4C5LYI1DLR4 | https://www.youtube.com | Validated | How to manage a team | Add value to the project management |
 # Technology
 
 | NAME | LINK | SOURCE | VALIDATION | SUBJECT | REASON |
