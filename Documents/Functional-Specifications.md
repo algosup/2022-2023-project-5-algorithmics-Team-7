@@ -77,9 +77,9 @@ The software should return two text files containing the following informations:
 
 `result.txt` (percentage of each wine in the resulting formula):
 ```
-19.048
-38.095
-42.857
+19
+38
+42
 ```
 `steps.txt` (connections to be made for each step):
 ```
