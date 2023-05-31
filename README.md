@@ -16,7 +16,7 @@ This software has been designed for Krug Champagne, which is a part of LVMH. The
 ## Background
 Champagne is a sparkling wine made using the traditional method, also known as the méthode champenoise. The method involves a complex process of fermentation and aging to create a unique flavor and texture that is associated with champagne. The main steps involved in making champagne are harvesting, pressing, first fermentation, blending, second fermentation, aging, riddling, disgorgement, and dosage.
 
-The software focuses on stage 4: blending.  As example, Krug Grande cuvée is a combination of 250 wines of the year plus 150 “reserve” wines from the past 14 years. The Cellar Master, Julie CAVIL, and her team will taste different combinations for about 9 months until they find the perfect formula (a bit like a perfume). Once the formula is known, it becomes the challenge of blending large quantities of wine in the right proportions.
+The software focuses on stage 4: blending.  As example, Krug Grande cuvée is a combination of 250 wines of the year plus 150 “reserve” wines from the past 14 years. The Cellar Master, and her team will taste different combinations for about 9 months until they find the perfect formula (a bit like a perfume). Once the formula is known, it becomes the challenge of blending large quantities of wine in the right proportions.
 
 ## Features
 The software has the following features:
