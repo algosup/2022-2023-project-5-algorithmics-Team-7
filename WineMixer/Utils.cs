@@ -1,0 +1,7 @@
+namespace WineMixer
+{
+    class Utils
+    {
+        
+    }
+}
