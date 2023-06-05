@@ -1,4 +1,4 @@
-## The Tuesday 02 May 2023
+## Tuesday, May 2, 2023
 Hello Franck, our team and I have a few questions regarding the start of this project.
 Regarding client contact, could you please clarify who will be our main point of contact with Krug Champagne during this project? And what is the best way to reach out to them if we have any questions or need additional information?
 For the formula of the champagne what is the percentage breakdown of each wine in the final blend? And what is the specific formula ?
@@ -10,7 +10,7 @@ Tanks come in all shapes and sizes. Again, nothing should be hard-coded in your 
 
 
 
-## The Wednesday 03 May 2023
+## Wednesday, May 3, 2023
 Karine Vinette <br>
   14 h 32 <br>
 Hello,
@@ -39,3 +39,25 @@ Your software should be generic and work regardless of how many tanks there are 
 You simple cannot leave a tank half empty/full. In other words if you are mixing 3 tanks of 500 hectoliters they have to go into a 1500 hectoliters tanks, there is no other solution.
 1,2 -> 3,4,5 (tank 1 plus 2 going to 3,4 and 5) is one step.
 Then you could have 3,4 -> 1 (you can reuse empty tanks if they are of the right size).
+
+
+
+## Monday, June 5, 2023
+Léo CHARTIER `09:51`
+> Hello Franck,
+While reading my notes of our meeting, I realized I used two words “unused” and “waste”. I wanted to clarify whether they meant the same to you of if you differentiate those.
+Thank you.
+
+Franck JEANNIN `14:55`
+> Hello, they are different. Unused means it can be used another year or to make another Champagne. Wasted is when oxydation occurs. For obvious reasons, unused is much better than wasted.
+
+Léo CHARTIER `14:59`
+> But since we are to always move full tanks to empty tanks, how could oxydation occur? Are we to be able to have partially filled tanks containing wine that cannot be used anymore?
+
+Franck JEANNIN `15:06`
+> You could decide to waste some wine in order to get closer to the formula. Let's say (very simplistic case) you have a full tank of 50hl of wine 1 and one of 100hl of wine 2. Let's assume the formula is 50%wine 1 + 50%wine 2 and you have an empty tank of 100hl (tank 3).
+You can do 1,2 => 3. The result will match the formula perfectly but you will waste 50hl of wine 2 (oxidating in tank 2). The user might think it is a better option that getting 150hl of 33%wine1+66%wine2 which is far from the formula.
+
+Léo CHARTIER `15:09`
+> Alright that does clarify things up. We will try to make the program flexible to accommodate the user’s wishes.
+Thank you very much for your time. Have a nice day.
