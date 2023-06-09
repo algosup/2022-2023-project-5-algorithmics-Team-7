@@ -1,6 +1,6 @@
 namespace WineMixer
 {
-    class Node
+    class Node : IEquatable<Node>
     {
         public Tank[] Tanks { get; }
         public (int, int)[] Connections { get; }
@@ -22,7 +22,7 @@ namespace WineMixer
         public double[] GetPercentagesBestTank(double[] recipe)
         {
             Tank? tank = GetFilledTanks().MinBy(tank => tank.GetDifference(recipe));
-            return tank == null ? new double[0] : tank.Percentages;
+            return tank is null ? new double[0] : tank.Percentages;
         }
 
         public double GetWaste()
@@ -32,17 +32,14 @@ namespace WineMixer
         {
             double[] formula = GetPercentagesBestTank(recipe);
             // return Tanks.Where(tank => tank.Percentages.Zip(recipe).Select(p => Utils.IsClose(p.First, p.Second)).All(x => x)).Select(tank => tank.Size).Sum();
-            Console.WriteLine("Formula " + string.Join(", ", formula));
             double sum = 0;
             foreach (Tank tank in Tanks)
             {
                 bool[] closeness = new bool[recipe.Count()];
                 for (int i = 0; i < recipe.Count(); i++)
                 {
-                    Console.WriteLine($"Closeness {tank.Percentages[i]}, {recipe[i]}");
                     closeness[i] = Utils.IsClose(tank.Percentages[i], recipe[i]);
                 }
-                Console.WriteLine(string.Join(",", closeness));
                 if (closeness.All(x => x))
                 {
                     sum += tank.Size;
@@ -53,6 +50,13 @@ namespace WineMixer
 
         public double GetUnused(double[] recipe)
             => Tanks.Take(recipe.Length).Select(tank => tank.Size).Sum() - GetWaste() - GetProduced(recipe);
+
+        public int GetStep()
+        {
+            int step = 0;
+            for (Node node = this; node.Parent != null; node = node.Parent) step++;
+            return step;
+        }
         
         public Node? Transfer((int, int)[] connections)
         {
@@ -134,7 +138,6 @@ namespace WineMixer
                 // Output must be smaller than the input
                 double inputVolume = xs.Distinct().Select(i => Tanks[i].GetVolumes().Sum()).Sum();
                 double outputMaxVolume = ys.Distinct().Select(j => Tanks[j].Size - Tanks[j].GetVolumes().Sum()).Sum();
-                if (inputVolume < outputMaxVolume) continue;
 
                 combinations = combinations.Append(connections).ToList();
             }
@@ -143,28 +146,36 @@ namespace WineMixer
             return combinations.Select(connections => Transfer(connections)).Where(node => node != null).ToArray()!;
         }
 
-        public override bool Equals(object? obj)
+        public override bool Equals(object? obj) => this.Equals(obj as Node);
+
+        public bool Equals(Node? node)
         {
-            if (obj == null || GetType() != obj.GetType()) return false;
+            if (node is null || GetType() != node.GetType()) return false;
             
-            return Tanks.Zip(((Node) obj).Tanks).Select(t => t.First == t.Second).All(x => x);
+            Tank[] otherTanks = ((Node) node).Tanks;
+            return Tanks.Zip(otherTanks).All(t => t.First.Equals(t.Second));
         }
-        
+
         public override int GetHashCode()
         {
-            // TODO: write your implementation of GetHashCode() here
-            // throw new System.NotImplementedException();
-            return base.GetHashCode();
+            // TODO: Better hash function
+            return Tanks.Aggregate(0, (hash, tank) => hash ^ tank.GetHashCode());
         }
 
-        public override string ToString() {
-            int step = -1;
-            for (Node? node = this; node != null; node = node.Parent) step++;
+        public static bool operator == (Node? a, Node? b)
+        {
+            if (a is null) return b is null;
+            return a.Equals(b);
+        }
 
+        public static bool operator != (Node? a, Node? b) => !(a == b);
+
+        public override string ToString() {
             return string.Format(
-                "Step {0}: [\n\t{1}\n]",
-                step,
-                string.Join("\n\t", Tanks.AsEnumerable())
+                "Step {0}: [\n\t{1}\n] {2}",
+                GetStep(),
+                string.Join("\n\t", Tanks.AsEnumerable()),
+                string.Join(", ", Connections)
             );
         }
     }
