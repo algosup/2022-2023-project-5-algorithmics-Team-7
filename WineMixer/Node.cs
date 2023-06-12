@@ -172,10 +172,9 @@ namespace WineMixer
 
         public override string ToString() {
             return string.Format(
-                "Step {0}: [\n\t{1}\n] {2}",
+                "Step {0}: [\n\t{1}\n]",
                 GetStep(),
-                string.Join("\n\t", Tanks.AsEnumerable()),
-                string.Join(", ", Connections)
+                string.Join("\n\t", Tanks.AsEnumerable())
             );
         }
     }
