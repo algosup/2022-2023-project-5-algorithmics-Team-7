@@ -1,16 +1,15 @@
 # Project Status Report - Phase 1
 
-## Project Information
-- Project Name: Krug Champagne Algorithm
-- Project Manager: Thomas Planchard
-- Start Date: 2023-05-02
-- End Date: 2023-06-22
-- Budget: N/A
+## Project Details
+- **Project Name:** Krug Champagne Project
+- **Project Manager:** Thomas Planchard
+- **Start Date:** 2023-05-02
+- **End Date:** 2023-06-22
 
 ## Project Summary
 The goal of this project is to create an algorithm for the Krug Champagne producer to optimize the blending process of their champagne while minimizing wine waste and maximizing their gains. Phase 1 of the project involves gathering information and requirements from stakeholders, researching existing algorithms, and designing the initial framework of the algorithm.
 
-## Accomplishments this week
+## Accomplishments 
 - Conducted meetings with stakeholders to gather information and requirements
 - Researched existing algorithms 
 - Designed the initial framework of the algorithm
@@ -25,8 +24,6 @@ The goal of this project is to create an algorithm for the Krug Champagne produc
 ## Issues and Concerns
 - We initially considered incorporating a user interface into the algorithm, but after further discussion with the project sponsor, we determined that it was not necessary and would delay the project timeline.
 
-## Budget
-N/A
 
 ## Project Metrics
 - Percentage of tasks completed: 20%

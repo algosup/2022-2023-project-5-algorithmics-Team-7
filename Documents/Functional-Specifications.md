@@ -1,6 +1,6 @@
 <hr>
 
-<p align="center" style="font-weight: bold; font-size: 21px"> Krug Champagne Blending Software</p>
+<p align="center" style="font-weight: bold; font-size: 21px"> Krug Champagne Project</p>
 <p align="center" style="font-weight: bold; font-size: 18px"> Functional Specifications</p>
 
 
@@ -11,7 +11,6 @@
 <summary>Table of contents</summary>
 
 - [Overview](#overview)
-- [Scope](#scope)
 - [Requirements](#requirements)
   - [Functional requirements](#functional-requirements)
   - [Non-functional requirements](#non-functional-requirements)

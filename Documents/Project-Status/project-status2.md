@@ -6,7 +6,7 @@
 - **Start Date:** 2023-05-02
 - **End Date:** 2023-06-22
 
-## Summary
+## Project Summary
 This project status report provides an overview of the progress and achievements during Phase 2 of the Krug Champagne Project. The report highlights the accomplishments, challenges, and upcoming tasks for the reporting period.
 
 ## Accomplishments
@@ -39,7 +39,15 @@ This project status report provides an overview of the progress and achievements
 - Refine and optimize the algorithm based on the test results.
 - Collaborate with the QA team to address their feedback and make necessary adjustments.
 
+## Project Metrics
+- Percentage of tasks completed: 40%
+- Project timeline: On track
+
 
 ## Conclusion
 Phase 2 of the Krug Champagne Project has seen significant progress in the development and integration of the algorithm. Despite challenges related to the unavailability of one team member and the departure of another, the team remains focused on refining the algorithm and meeting the project objectives. The upcoming tasks and milestones will further advance the project towards its successful completion.
 
+
+## Next Report
+
+The next project status report will be submitted on 06/09/2023.

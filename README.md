@@ -1,4 +1,4 @@
-# Krug Champagne Winery Software
+# Krug Champagne Project
 
 This software has been designed for Krug Champagne, which is a part of LVMH. The software aims to assist in the blending stage of the champagne-making process. The blending stage is a critical phase in creating the Champagne.
 
@@ -12,6 +12,7 @@ This software has been designed for Krug Champagne, which is a part of LVMH. The
 - **[Critical Path](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Management/Critical-Path.pdf)**
 - **[Risk Management Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Management/Risk-Management-Plan.md)**
 - **[Quality Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Quality-Assurance/Quality-Plan.md)**
+- **[Deployment Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Deployment-Plan.md)**
 
 ## Background
 Champagne is a sparkling wine made using the traditional method, also known as the méthode champenoise. The method involves a complex process of fermentation and aging to create a unique flavor and texture that is associated with champagne. The main steps involved in making champagne are harvesting, pressing, first fermentation, blending, second fermentation, aging, riddling, disgorgement, and dosage.

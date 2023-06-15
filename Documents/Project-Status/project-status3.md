@@ -1,14 +1,13 @@
 # Project Status Report
 
-## Project Information
+## Project Details
+- **Project Name:** Krug Champagne Project
+- **Project Manager:** Thomas Planchard
+- **Start Date:** 2023-05-02
+- **End Date:** 2023-06-22
 
-- Project Name: Krug Champagne Algorithm
-- Project Manager: Thomas Planchard
-- Start Date: 2023-05-02
-- End Date: 2023-06-22
 
-
-## Summary
+## Project Summary
 
 This project status report provides an overview of the progress and achievements during Phase 3 of the Krug Champagne Project. The report highlights the accomplishments, challenges, and upcoming tasks for the reporting period.
 

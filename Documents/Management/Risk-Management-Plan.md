@@ -16,7 +16,7 @@
 
 ## Purpose
 
-The purpose of this Risk Management Plan is to identify and address potential risks that may impact the successful development and implementation of the Krug Champagne Software.
+The purpose of this Risk Management Plan is to identify and address potential risks that may impact the successful development and implementation of the Krug Champagne Project.
 
 ## Objectives
 
