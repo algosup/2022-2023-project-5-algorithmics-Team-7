@@ -5,15 +5,15 @@
 
 This document is primarily intended for:
 
-* Software developer � to understand the user and technical requirements, and to guide decision-making and planning. Help them understand risks and challenges, customer requirements, and additional technical requirements and choices made.  
+* Software developer - to understand the user and technical requirements, and to guide decision-making and planning. Help them understand risks and challenges, customer requirements, and additional technical requirements and choices made.  
 Secondary audiences 
-* Program manager � to validate against the functional specification, and the client expectations. 
-* QA � to aid in preparing the test-plan and to use for validating issues.
-* Project manager � to help identify risks and dependencies 
+* Program manager - to validate against the functional specification, and the client expectations. 
+* QA - to aid in preparing the test-plan and to use for validating issues.
+* Project manager - to help identify risks and dependencies 
 
 # Deliverable
 
-A console application that determines the �best� blending process to 
+A console application that determines the "best" blending process to 
 achieve a desired proportion of wines using a fixed number of tanks, and in the fewest steps.   
 
 # Details 
@@ -30,7 +30,7 @@ Evaluating the best blending process is assumed to be an intractable problem due
 * Sizes of tanks containing initial wines.  
 * Output steps 
 * Output reached blend.
-* Reproducible � given the same input, produces the same output.
+* Reproducible - given the same input, produces the same output.
 * Steps are never impossible.
 * Steps never leave a tank partially full or empty  
 
@@ -51,8 +51,8 @@ Evaluating the best blending process is assumed to be an intractable problem due
 
 # Priorities
 
-1.	Correctness of algorithm � no half-full tanks, no illegal transfers. 
-2.	Reasonable performance at scale (doesn�t take hours to run).
+1.	Correctness of algorithm - no half-full tanks, no illegal transfers. 
+2.	Reasonable performance at scale (doesn't take hours to run).
 
 # Technical Architecture 
 
@@ -69,23 +69,23 @@ C# was chosen because it works on multiple platforms, performs well, has great u
 
 Three files on the command line: 
 * Arg[0] - a text file containing list of whole numbers, each on a separate line representing relative tank sizes. 
-* Arg[1] � a text file list of numbers, representing relative wine amount in target blend. 
-* Arg[2] � a JSON options file (optional)
+* Arg[1] - a text file list of numbers, representing relative wine amount in target blend. 
+* Arg[2] - a JSON options file (optional)
 
 ## Output Data
 
 Three text files 
 
-* Result.txt � a list of wine percentages at the end of the process 
-* Steps.txt � a list of steps describing the process
+* Result.txt - a list of wine percentages at the end of the process 
+* Steps.txt - a list of steps describing the process
 
 ## Non-Requirements / Out of scope
 
 * Graphical user interface 
 * History of running the application
 * Security and passwords  
-* �Previous use history� of tanks
-* Blending data �notes from the tasting team�
+* "Previous use history" of tanks
+* Blending data "notes from the tasting team"
 * Security concerns
 
 ## Operating Requirements: 
@@ -95,10 +95,10 @@ Three text files
 	* 300 tanks
 
 ## Assumptions
-* It doesn�t matter what the specified wine amounts add up to (1, 100, other) 
+* It doesn't matter what the specified wine amounts add up to (1, 100, other) 
 * Wine cannot be transferred from a tank back into itself during the same step/operation..
 * Wine cannot be added or removed from the system.  
-* Whether we count the number of transfers, or group them together won�t make a difference.  
+* Whether we count the number of transfers, or group them together won't make a difference.  
 * When considering how close the result is to the formula, we can use Euclidean distance. 
 * The total wine in the system is a constant
 * Identifying an optimal result may not be possible, we are satisfied with good enough. 
@@ -119,7 +119,7 @@ The following are ideas for what could be considered configurable options. They 
 Some of the key operations that the software will perform and that need to be represented via functions are: 
 
 * Evaluating the list of possible transfers for a given tank 
-* Evaluating the �closeness� of two blends of wines � this is performed by normalizing the blend in each mix (using the vector normal function for N dimension) and performing a Euclidean distance operation. 
+* Evaluating the "closeness" of two blends of wines - this is performed by normalizing the blend in each mix (using the vector normal function for N dimension) and performing a Euclidean distance operation. 
 * Compute a score for two system states to choose which one is better.
 * Quickly compute which tanks add up to a given amount: a problem known as the combination sum problem. 
 
@@ -128,9 +128,9 @@ Some of the key operations that the software will perform and that need to be re
 The following are the coding design principles: 	
 
 * Rely minimally on third party libraries. 
-* Minimize use of mutable data types � when systems can change during execution it makes reasoning about them very hard, and can hinder parallelism. 
+* Minimize use of mutable data types - when systems can change during execution it makes reasoning about them very hard, and can hinder parallelism. 
 * Enable system to evaluate possible states in parallel. 
-* Minimize use of static data � flexibility in the system is very important and static data tends to create hidden coupling and limit refactoring. 
+* Minimize use of static data - flexibility in the system is very important and static data tends to create hidden coupling and limit refactoring. 
 * Emphasize improved algorithmic complexity over micro-optimization 
 * Use unit tests to assure correctness during development.  
 * Use assertions to validate key assumptions 
@@ -146,14 +146,14 @@ that could benefit from further research and could help guide the implementation
 ### Unproven Hypotheses
 
 * Given a state where the best wine blend is X, it would never be desirable to backtrack to a system state that is worse. 
-* A purely �greedy� approach won�t produce an optimal result. 
+* A purely "greedy" approach won't produce an optimal result. 
 * Precomputing the list of possible transitions based purely on tank volumes can be desirable.
 * The Manhattan distance metric might yield the same results 
 * Computing stuck states could be useful and might want to be penalized. 
 * It could be useful to score the ability to create blends that can be combined with the target blend effectively, rather than just the combined.
 * Knowing what tank combinations add up to a particular value might optimize the process of figuring out transition possibilities. 
 * Sometimes random searching a tree of possibilities might be good to prevent the system from getting stuck in local minima. 
-* A deeper lookahead, even if all cases can�t be considered might still be desirable. 
+* A deeper lookahead, even if all cases can't be considered might still be desirable. 
 
 ### Proven Hypotheses
 
@@ -163,12 +163,12 @@ that could benefit from further research and could help guide the implementation
 
 ## Main Classes
 
-* Configuration � Data set up on program initialization based on inputs from user that don�t change. Contains: list of tank sizes, the target mix, and configuration options.
-* Configuration Options � easily serialized set of values used to control the parameters of operation, such as heuristics.
-* Mix � a list of numbers corresponding to the amount of each wine in the tank 
-* State � a list of mixes, one for each tank. 
-* Tank list � a set of indices representing a set of tanks. Indices should be non-repeated and ascending. 
-* Transfer � contains an input tank list and output tank list. Used for considering possible steps, and storing the list of chosen steps to arrive at the final state. 
+* Configuration - Data set up on program initialization based on inputs from user that don't change. Contains: list of tank sizes, the target mix, and configuration options.
+* Configuration Options - easily serialized set of values used to control the parameters of operation, such as heuristics.
+* Mix - a list of numbers corresponding to the amount of each wine in the tank 
+* State - a list of mixes, one for each tank. 
+* Tank list - a set of indices representing a set of tanks. Indices should be non-repeated and ascending. 
+* Transfer - contains an input tank list and output tank list. Used for considering possible steps, and storing the list of chosen steps to arrive at the final state. 
 
 ## Challenge
 
@@ -209,11 +209,11 @@ that could benefit from further research and could help guide the implementation
 
 ##  Glossary
 
-* Transfer � a transfer of wines from one or more tanks to one or more tanks. 
-* Step � a step is one or more transfers that can be executed simultaneously. 
-Could be one transfer per step, doesn�t change much  
-* State � the amount of each type of wine in each tank 
-* Blend � aka mix � a set of proportions of wines 
-* Blending process � aka �the process� and �the algorithm� � a series of steps that must be carried out to blend the mix 
-* Distance � closeness - given two wine blends, this a measure of how similar they are. 
+* Transfer - a transfer of wines from one or more tanks to one or more tanks. 
+* Step - a step is one or more transfers that can be executed simultaneously. 
+Could be one transfer per step, doesn't change much  
+* State - the amount of each type of wine in each tank 
+* Blend - aka mix - a set of proportions of wines 
+* Blending process - aka "the process" and "the algorithm" - a series of steps that must be carried out to blend the mix 
+* Distance - closeness - given two wine blends, this a measure of how similar they are. 
 
