@@ -1,5 +1,5 @@
 # Krug Champagne Project
-## Technical Specifications (Draft June 14th) 
+## Technical Specifications
 
 # Audience
 
