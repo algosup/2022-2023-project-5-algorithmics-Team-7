@@ -2,17 +2,20 @@
 
 This software has been designed for Krug Champagne, which is a part of LVMH. The software aims to assist in the blending stage of the champagne-making process. The blending stage is a critical phase in creating the Champagne.
 
-- **[Trello Board](https://trello.com/b/QVQdK1at/finalproject)**
-- **[KPI Dashboard](https://docs.google.com/spreadsheets/d/1rdj3Sp6lbA9zX_4oCAbLPIQLKgYrU9wKa_OI0TgnUcU/edit?usp=sharing)**
+
+- **[Project Management Documentation](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Management/Project-Management-Documentation.md)**
+- **[Project Charter](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Project-Chart.md)**
 - **[Functional Requirements](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Functional-Specifications.md)**
 - **[Techniqual Requirements](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Technical-Specifications.md)**
-- **[Project Charter](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Project-Chart.md)**
-- **[RACI](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Management/RACI.pdf)**
-- **[Project Management Documentation](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Management/Project-Management-Documentation.md)**
-- **[Critical Path](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Management/Critical-Path.pdf)**
-- **[Risk Management Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Management/Risk-Management-Plan.md)**
 - **[Quality Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Quality-Assurance/Quality-Plan.md)**
-- **[Deployment Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Deployment-Plan.md)**
+- **[Risk Management Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Management/Risk-Management-Plan.md)**
+- **[Deployment Plan](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Software-Documentation.md)**
+- **[Software Documentation](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Deployment-Plan.md)**  
+- **[Trello Board](https://trello.com/b/QVQdK1at/finalproject)**
+- **[KPI Dashboard](https://docs.google.com/spreadsheets/d/1rdj3Sp6lbA9zX_4oCAbLPIQLKgYrU9wKa_OI0TgnUcU/edit?usp=sharing)**
+- **[Critical Path](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/tree/main/Documents/Management/Critical-Path.pdf)**
+- **[RACI](https://github.com/algosup/2022-2023-project-5-algorithmics-Team-7/blob/main/Documents/Management/RACI.pdf)**
+
 
 ## Background
 Champagne is a sparkling wine made using the traditional method, also known as the méthode champenoise. The method involves a complex process of fermentation and aging to create a unique flavor and texture that is associated with champagne. The main steps involved in making champagne are harvesting, pressing, first fermentation, blending, second fermentation, aging, riddling, disgorgement, and dosage.
