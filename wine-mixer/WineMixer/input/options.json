@@ -1,0 +1,9 @@
+{
+  "MaxInputOrOutputTanks": 3,
+  "RunInParallel": true,
+  "OutputBlendFileName": "result.txt",
+  "OutputStepsFileName": "steps.txt",
+  "OutputJsonFileName": "output-{datetime}.json",
+  "OutputFolder": "output",
+  "MaxNumSteps": 20
+}

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WineMixer", "WineMixer\WineMixer.csproj", "{F4839542-5AD2-4A16-8E69-3484E2FE0C7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{067109F4-7702-4E24-87D6-D478635F7B85}"
+	ProjectSection(SolutionItems) = preProject
+		Investigation.md = Investigation.md
+		README.md = README.md
+		Technical-Specification.md = Technical-Specification.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WineMixerTests", "WineMixerTests\WineMixerTests.csproj", "{D44B707F-54A4-4A24-A90F-804C1C7B4D6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4839542-5AD2-4A16-8E69-3484E2FE0C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4839542-5AD2-4A16-8E69-3484E2FE0C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4839542-5AD2-4A16-8E69-3484E2FE0C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4839542-5AD2-4A16-8E69-3484E2FE0C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44B707F-54A4-4A24-A90F-804C1C7B4D6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44B707F-54A4-4A24-A90F-804C1C7B4D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44B707F-54A4-4A24-A90F-804C1C7B4D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44B707F-54A4-4A24-A90F-804C1C7B4D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {872F0BDC-152E-425A-941B-574AD2AD7893}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,357 @@
+﻿Observations:
+* Adding wine is pointless, unless you are going to mix it with something immediately.
+* Removing wine is pointless, unless you are going add wine into it or combine into it
+* Splitting wine is pointless, unless you are going to mix one of its containers immediately. 
+* Most of what we do is combine wines 
+* It is possible to get in a state where we can't mix more wines 
+* If you don't split wines, never worry about dumping wines 
+* Mixing a wine A, with another wine B or C, will not necessarily be better if mixed with B if B is better than C. 
+* Adding a wine means it should be mixed with the previous wine, or the next wine (otherwise don't add it).
+	* This reduces considering the same path too many times, and being inefficient. 
+* Instead of removing wine, we can just add to an existing wine spot.
+* Instead of re
+* To get a perfect match, we will have to add every wine. 
+
+
+Hypothesis
+* Mixing two tanks should always produce wine that is of better quality than before
+* The greedy approach is not always the best. 
+* Having a variety of wines, might be better than just distance. 
+* When making a choice of what Wine to add ... it would be best to try wines that haven't been used yet. 
+* This all looks a bit like the traveling salesman problem ... 
+* Adding the most common wine first, might make the most sense. Easiest to get the amount right. 
+	* Similar to sorting by the best possible direction. 
+* We could maybe compute how close all of the wines are to the target. 
+* Computing the total mix of wine can give us an estimate of how close we could potentially get. 
+	* I think I would use that to evaluate a state. 
+	* This is done by combining all of the wines 
+
+Process Example
+* There are N * M starting states (N tanks, M wines). 
+* The first thing to do is add a wine A
+* Then another A, B
+* Then you combine it C 
+* Then you add more wine C, D 
+* Then you either:
+	* Mix it (E)
+	* Or add more wine C,D,E 
+		* Either mix D,E = C,F 
+		* or mix C,E = D,F
+
+* You either:
+	* Mix existing wines
+	* Add a new wine, and mix 
+	* Add two new wines and mix them 
+
+//== 
+
+There should be a bonus for using more wines. 
+
+I am considering transitions that have no hope ... maybe deleting some of them would be a good idea? 
+I need to not sort so much. 
+Splitting would be good. 
+My current system is not good. 
+
+//==
+
+TODO: 
+* Multiple tank combines. 
+
+//== 
+
+What is the distance between two wines. 
+
+What happens when I add two wines. 
+* Adding a worse wine to another wine, makes it worse.
+* However, it may be desirable to have a small amount of this worse wine for mixing purposes. 
+
+If I have the perfect wine what happens?
+* Adding a non-perfect wine makes it worse
+
+Somehow considering the sizes of the tanks for everything is important. 
+* Maybe there is a score I can give a state based on: 
+	* How much of all the wine it has. 
+
+The questions are: 
+* Can I combine any more wines? 
+
+What if I:
+* Separate the way that wines are combined, from the actual wines that are combined. 
+
+All of a sudden we can consider different possibilities. 
+
+The possibilities however get a bit complicated. 
+
+This would massively reduce the search space. 
+
+Given a list of tanks, what are the valid combination sizes. 
+Given the valid combination sizes, what are the kinds of blends I can make. 
+
+//==
+
+The number of possible sets gets big very fast. 
+
+However, I suspect there is a lot of repetition. 
+
+Note that if two tanks are the same size, then they have the same 
+tank configuration
+
+//==
+
+Found 0 immediate operations
+Found 0 states reachable via combines only
+From 0 operations chose 
+State 1814 depth=14 volume=102 tanks=10/10
+Target is (0.1, 0.15, 0.25, 0.5)
+Best mix is (0, 0.302, 0.302, 0.905) of distance 0.222165
+Average mix is (0.922, 0.04, 0.04, 0.383) of distance 0.990168
+Tank 0 has size 1 and contains (0, 0, 0, 1) of distance 0.545
+Tank 1 has size 2 and contains (0, 0, 0, 1) of distance 0.545
+Tank 2 has size 3 and contains (1, 0, 0, 0) of distance 1.288
+Tank 3 has size 5 and contains (1, 0, 0, 0) of distance 1.288
+Tank 4 has size 8 and contains (1, 0, 0, 0) of distance 1.288
+Tank 5 has size 10 and contains (1, 0, 0, 0) of distance 1.288
+Tank 6 has size 13 and contains (1, 0, 0, 0) of distance 1.288
+Tank 7 has size 15 and contains (1, 0, 0, 0) of distance 1.288
+Tank 8 has size 20 and contains (1, 0, 0, 0) of distance 1.288
+Tank 9 has size 25 and contains (0, 0.302, 0.302, 0.905) of distance 0.222
+
+//==
+
+Introducing Tank Splits plus optimization to get best in smallest tank and things got even better:
+
+Found 0 immediate operations
+Found 0 states reachable via combines only
+From 0 operations chose 
+State 1794 depth=16 volume=102 tanks=10/10
+Target is (0.1, 0.15, 0.25, 0.5)
+Best mix is (0.255, 0.17, 0.426, 0.851) of distance 0.120386
+Average mix is (0.974, 0.02, 0.05, 0.218) of distance 1.114998
+Tank 0 has size 1 and contains (0, 0, 0, 1) of distance 0.545
+Tank 1 has size 2 and contains (1, 0, 0, 0) of distance 1.288
+Tank 2 has size 3 and contains (1, 0, 0, 0) of distance 1.288
+Tank 3 has size 5 and contains (1, 0, 0, 0) of distance 1.288
+Tank 4 has size 8 and contains (1, 0, 0, 0) of distance 1.288
+Tank 5 has size 10 and contains (1, 0, 0, 0) of distance 1.288
+Tank 6 has size 13 and contains (1, 0, 0, 0) of distance 1.288
+Tank 7 has size 15 and contains (1, 0, 0, 0) of distance 1.288
+Tank 8 has size 20 and contains (0.255, 0.17, 0.426, 0.851) of distance 0.12
+Tank 9 has size 25 and contains (1, 0, 0, 0) of distance 1.288
+
+Found 0 immediate operations
+Found 0 states reachable via combines only
+From 0 operations chose 
+
+//==
+
+Computing possible operations	is the longest thing right now. 
+
+Rather than filter a big list, I might just want to recreate the function. 
+
+This would probably be much faster. 
+
+* I only want to propose tank lists that contain unoccupied tanks. 
+* I can stop once a target volume is hit. 
+* I can make it multi-threaded
+* It might be a bit easier.
+* I am considering different states multiple times. 
+* Not that many though. 
+* Maybe I can remove from consideration operations 
+that make things worse. 
+
+It took 2 minutes. 
+
+After a bit of optimization it is down to 1:15. 
+
+I could also do a bit of grouping. 
+Given a tank, find out what tank lists it is contained in. 
+
+HOWEVER, this might not be faster, because in that layout 
+tanklists are listed multiple times. 
+
+But there are 2424 tank lists for 20 tanks. 
+
+The idea is that that I can loop through the occupied tanks and then figure out 
+where can they go to real quick. 
+
+Is there someway to cache a state? Or to say ... look transferring with X 
+is going to give me a score.
+
+Do I assign a bonus for having more tanks? 
+
+//==
+
+The thing is that I quickly know if combining tanks is a good idea. 
+
+Look at the tanks ... if the relative mix is good ... keep it.
+Otherwise, don't! 
+
+This significantly reduces the amount of "thinking" that we have to do. 
+
+//==
+
+Is there something I can do with looking at the values.
+
+In theory if blending them would be improvement, then that is good, 
+somehow I can blend it. 
+
+The idea is that maybe the "halfway" amount is closer than both of them. 
+
+But what if we just want it be a bit closer. 
+
+The other idea then is to bring the averages. 
+
+What I want to convey is the fact that having some amount from somewhere else is good. 
+
+The distance between the current and the target is knowable as well. 
+
+So a secondary score could be ... best delta. 
+
+//==
+
+The number of tanks holding wine always adds up to the same number. 
+
+Given a starting configuration, we can figure out what tank configurations 
+are possible and which ones are not reachable. 
+
+Maybe considering all possibilities and removing some. 
+
+Making the best wine worse should be NOT an option. 
+
+//==
+
+Making the best blend worse, should never be an option. 
+
+Not improving the delta, or the average. 
+Nor sure about that neither. 
+
+Restricting to 2<=>2 is easier for now. 
+
+step 39
+Found 979 transfer operations
+State 70397 depth=39 volume=78 tanks=10/24
+Target is (0.1, 0.15, 0.25, 0.5)
+Best mix is (0.208, 0.274, 0.521, 0.781) of distance 0.125502
+Average mix is (0.174, 0.594, 0.436, 0.654) of distance 0.39221
+
+Actually restricting to 3<=>3.
+
+Found a problem with the delta computation.
+
+//==
+
+step 39
+Found 979 transfer operations
+State 70397 depth=39 volume=78 tanks=10/24
+Target is (0.1, 0.15, 0.25, 0.5)
+Delta target is (-0.017, -0.003, -0.042, 0.062)
+Best mix is (0.208, 0.274, 0.521, 0.781) of distance 0.125502
+Average mix is (0.19, 0.476, 0.476, 0.714) of distance 0.26549
+Best delta mix is (0.211, 0.22, 0.528, 0.792) of distance 1.186419
+
+//==
+
+Maybe I should evaluate things looking at pairs.
+
+Finding the average of each pair. The best average should be something important. 
+
+//==
+
+step 5
+Found 1129 transfer operations
+State 9269 depth=5 volume=82 tanks=8/24
+Target is (0.12, 0.18, 0.2, 0.3, 0.1, 0.04, 0.06)
+Best mix is (0.384, 0.439, 0.439, 0.659, 0.048, 0.077, 0.153) of distance 0.216639
+Average mix is (0.19, 0.475, 0.475, 0.713, 0.024, 0.024, 0.048) of distance 0.258253
+
+//==
+
+step 5
+Found 1129 transfer operations
+State 9269 depth=5 volume=82 tanks=8/24
+Target is (0.12, 0.18, 0.2, 0.3, 0.1, 0.04, 0.06)
+Best mix is (0.384, 0.439, 0.439, 0.659, 0.048, 0.077, 0.153) of distance 0.216639
+Average mix is (0.19, 0.475, 0.475, 0.713, 0.024, 0.024, 0.048) of distance 0.258253
+
+//==
+
+Mixes are slow. Precomputing stuff would be helpful. I could even precompute the distance
+from X. 
+
+Note: choosing a transfer is just a question of asking: what mix would the transfer create, and 
+what is that distance.
+
+This is a LOT faster.
+
+//==
+
+* Use dynamic programming to compute permutations.
+* Check error conditions for inpuis
+* Report on errors 
+* Output usage text
+* Don't consider degenerate transfer cases (where input tank volumes and output tank volumes are the same )
+	* This algorithm would eliminate A -> B.
+* Look for stuck cases 
+
+- Reduce to 10 steps
+- Output the normalized target
+- Output the json 
+- The final blend should be expressed in terms of a value 
+
+//==
+
+First run
+Found 3523970 permutations adding up to 16 in 3.53 seconds
+Number of tank indices in lookup 16
+Total entries in lookup 135
+Naive run
+Found 3523970 permutations adding up to 16 in 4.37 seconds
+Second run
+Found 3523970 permutations adding up to 16 in 3.86 seconds
+
+//==
+
+* Even in release mode, the result is the same.
+* The current solution has the problem that it reuses tank sizes.
+* The dynamic programming table does nothing to reduce complexity.
+* THere are a lot of permutations. 
+* This is embarassing.
+* Maybe it is useful if:
+	* Just counting permutations
+	* If I filtered the data? 
+* There are a ton of things created. 
+* BUT ... we can't have repetition of tanks. 
+
+//==
+
+
+First run
+Found 252853 permutations adding up to 20 in .29 seconds
+Number of tank indices in lookup 20
+Total entries in lookup 664389
+Naive run
+Found 252853 permutations adding up to 20 in 1931.93 seconds
+
+//== 
+
+This is the combination sum problem.
+It is harder to solve than it looks. 
+
+The "contains" issue can be solved by checking off the tanks that are already used, and 
+not reusing them. 
+
+What I ran into a problem with is the fact that I am reusing values ...
+
+sometimes I'll say "2 3 4" and other times "3 2 4" etc. 
+
+Given the list of tanks that add up to X, how would I do it? 
+
+Maybe the dynamic programming should just be used to compute combinations? 
+
+The thing is that if I have combinations ... for up to 30.
+
+The current idea is that: 
+I look at all tanks. Then for each tank, I look at the combinations adding up to it. 
+Now I could eliminate those combinations that are not relevant by sorting them. 
+
+If I sort the lists, they will be a bit easier to detect if I am adding an element 

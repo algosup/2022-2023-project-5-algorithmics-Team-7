@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "WineMixer": {
+      "commandName": "Project",
+      "commandLineArgs": "tanks_small1.txt recipe_small1.txt",
+      "workingDirectory": "C:\\Users\\cdigg\\git\\wine-mixer\\WineMixer\\input"
+    },
+    "Benchmark": {
+      "commandName": "Project"
+    }
+  }
+}
