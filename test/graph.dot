@@ -1,0 +1,65 @@
+digraph "blending steps" {
+	node [shape=box]
+	expected [label="Expected: 20.0% N°1 40.0% N°2 40.0% N°3"]
+	actual [label="Actual: 20.635% N°1 39.683% N°2 39.683% N°3"]
+	
+	node [shape=none fixedsize=true width=1 label=""]
+	_ [group=0]
+	T1 [group=1 label="Tank 1\n10.0"]
+	T2 [group=2 label="Tank 2\n20.0"]
+	T3 [group=3 label="Tank 3\n30.0"]
+	T4 [group=4 label="Tank 4\n15.0"]
+	T5 [group=5 label="Tank 5\n15.0"]
+	T6 [group=6 label="Tank 6\n35.0"]
+	S0 [group=0 label="Start"]
+	S1 [group=0 label="Step 1"]
+	S2 [group=0 label="Final"]
+	
+	node [shape=box]
+	T1S2 [group=1 height=1.0 label="N°1: 2.381\nN°2: 3.81\nN°3: 3.81"]
+	T2S2 [group=2 height=2.0 label="N°1: 3.81\nN°2: 8.095\nN°3: 8.095"]
+	T3S2 [group=3 height=3.0 label="N°3: 10.0" color=red fontcolor=red]
+	T4S2 [group=4 height=1.5]
+	T5S2 [group=5 height=1.5 label="N°1: 3.095\nN°2: 5.952\nN°3: 5.952"]
+	T6S2 [group=6 height=3.5 label="N°1: 0.714\nN°2: 2.143\nN°3: 2.143" color=red fontcolor=red]
+	T1S1 [group=1 height=1.0]
+	T2S1 [group=2 height=2.0]
+	T3S1 [group=3 height=3.0 label="N°3: 10.0" color=red fontcolor=red]
+	T4S1 [group=4 height=1.5 label="N°1: 5.0\nN°2: 5.0\nN°3: 5.0"]
+	T5S1 [group=5 height=1.5]
+	T6S1 [group=6 height=3.5 label="N°1: 5.0\nN°2: 15.0\nN°3: 15.0"]
+	T1S0 [group=1 height=1.0 label="N°1: 10.0"]
+	T2S0 [group=2 height=2.0 label="N°2: 20.0"]
+	T3S0 [group=3 height=3.0 label="N°3: 30.0"]
+	T4S0 [group=4 height=1.5]
+	T5S0 [group=5 height=1.5]
+	T6S0 [group=6 height=3.5]
+	
+	splines=line
+	T4S1:s -> T1S2:n
+	T4S1:s -> T2S2:n
+	T4S1:s -> T5S2:n
+	T6S1:s -> T1S2:n
+	T6S1:s -> T2S2:n
+	T6S1:s -> T5S2:n
+	T1S0:s -> T4S1:n
+	T1S0:s -> T6S1:n
+	T2S0:s -> T4S1:n
+	T2S0:s -> T6S1:n
+	T3S0:s -> T4S1:n
+	T3S0:s -> T6S1:n
+	
+	edge [style=invis]
+	expected:s -> {_:n T6}
+	{S2:s T6S2} -> actual:n
+	{ rank=same; _ -> T1 -> T2 -> T3 -> T4 -> T5 -> T6 }_ -> S0 -> S1 -> S2
+	T1 -> T1S0 -> T1S1 -> T1S2
+	T2 -> T2S0 -> T2S1 -> T2S2
+	T3 -> T3S0 -> T3S1 -> T3S2
+	T4 -> T4S0 -> T4S1 -> T4S2
+	T5 -> T5S0 -> T5S1 -> T5S2
+	T6 -> T6S0 -> T6S1 -> T6S2
+	{ rank=same; S0 -> T1S0 -> T2S0 -> T3S0 -> T4S0 -> T5S0 -> T6S0 }
+	{ rank=same; S1 -> T1S1 -> T2S1 -> T3S1 -> T4S1 -> T5S1 -> T6S1 }
+	{ rank=same; S2 -> T1S2 -> T2S2 -> T3S2 -> T4S2 -> T5S2 -> T6S2 }
+}
